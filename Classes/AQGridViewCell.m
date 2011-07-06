@@ -302,7 +302,11 @@
 {
 	if ( (_cellFlags.usingDefaultSelectedBackgroundView == 1) && (_selectedBackgroundView == nil) )
 	{
+#if (defined(HSL_IGNORE_DEAD_CODE) || !BUILTIN_IMAGES)
         NSString *imageName = nil;
+#endif
+
+
 #ifdef BUILTIN_IMAGES
 		unsigned char * pngBytes = AQGridSelection_png;
 		NSUInteger pngLength = AQGridSelection_png_len;
@@ -312,7 +316,10 @@
 			case AQGridViewCellSelectionStyleBlue:
 			default:
 				break;
-				
+
+// TODO: unsure of the author's intention here. this code is dead and has been preprocessed out because we don't want it in our issues. check for updates from the source later.
+#if defined(HSL_IGNORE_DEAD_CODE)
+#error "you should not #define HSL_IGNORE_DEAD_CODE. choose another identifier."
 			case AQGridViewCellSelectionStyleGray:
 				imageName = @"AQGridSelectionGray.png";
 				break;
@@ -328,12 +335,15 @@
 			case AQGridViewCellSelectionStyleRed:
 				imageName = @"AQGridSelectionRed.png";
 				break;
+#endif /* << HSL_IGNORE_DEAD_CODE */
 		}
 		
 		NSData *pngData = [NSData dataWithBytesNoCopy: pngBytes length: pngLength freeWhenDone: NO];
 		_selectedBackgroundView = [[UIImageView alloc] initWithImage: [UIImage imageWithData: pngData]];
-#else
-	        imageName = @"AQGridSelection.png";
+
+#else /* !BUILTIN_IMAGES */
+
+		imageName = @"AQGridSelection.png";
 		switch ( _cellFlags.selectionStyle )
 		{
 			case AQGridViewCellSelectionStyleBlue:
@@ -358,7 +368,9 @@
 		}
 		
 		_selectedBackgroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: imageName]];
-#endif
+
+#endif /* << BUILTIN_IMAGES */
+
 		_selectedBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 		_selectedBackgroundView.contentMode = UIViewContentModeScaleToFill;
 	}
