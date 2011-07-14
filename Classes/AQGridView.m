@@ -542,8 +542,9 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 	    if (newSize.height < footerHeight + minimumHeight)
 	        newSize.height = minimumHeight;
 	}
-
-	newSize.height = fmax(newSize.height, self.frame.size.height+1);
+    
+// See GitHub issue: https://github.com/AlanQuatermain/AQGridView/issues/51
+//	newSize.height = fmax(newSize.height, self.frame.size.height+1);
 
 	CGSize oldSize = self.contentSize;
 	[super setContentSize: newSize];
