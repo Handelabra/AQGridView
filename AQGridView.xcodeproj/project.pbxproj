@@ -382,6 +382,39 @@
 			};
 			name = Cupcakes;
 		};
+		FDE37F0F147071C9009E3323 /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(VALID_ARCHS)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 armv7";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
+			};
+			name = TestFlight;
+		};
+		FDE37F10147071C9009E3323 /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/AQGridView.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AQGridView_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = BUILTIN_IMAGES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = AQGridView;
+				SKIP_INSTALL = YES;
+			};
+			name = TestFlight;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,6 +424,7 @@
 				1DEB921F08733DC00010E9CD /* Debug */,
 				1DEB922008733DC00010E9CD /* Cupcakes */,
 				098430D113C45C7B0050C2D5 /* Distribution */,
+				FDE37F10147071C9009E3323 /* TestFlight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Cupcakes;
@@ -401,6 +435,7 @@
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Cupcakes */,
 				098430D013C45C7B0050C2D5 /* Distribution */,
+				FDE37F0F147071C9009E3323 /* TestFlight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Cupcakes;
