@@ -292,7 +292,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = armv7;
 				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
 			};
 			name = Distribution;
@@ -365,7 +365,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = armv7;
 				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
 			};
 			name = Debug;
@@ -383,7 +383,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = armv7;
 				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
 			};
 			name = Cupcakes;
@@ -401,7 +401,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = armv7;
 				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
 			};
 			name = TestFlight;
